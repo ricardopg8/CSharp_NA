@@ -19,11 +19,11 @@ namespace ConsoleApp1 {
 
         public override string ToString() {
             return Nome
-                + " , $ "
+                + " , $"
                 + Preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ","
                 + Quantidade
-                + "Unidades, Total: $"
+                + " Unidades, Total: $"
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
