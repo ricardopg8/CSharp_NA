@@ -1,4 +1,6 @@
-﻿using ConstrutorUm;
+﻿// See https://aka.ms/new-console-template for more information
+using System.Globalization;
+using Construtor_This;
 using System.Globalization;
 namespace Course {
     class Program {
@@ -12,11 +14,11 @@ namespace Course {
             string nome = Console.ReadLine();
             Console.Write("Preço: ");
             double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade: ");
+            Console.WriteLine("Quantidade: ");
             int quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
-            Produto p = new Produto (nome, preco, quantidade);
+            Produto p = new Produto(nome, preco, quantidade);
             Produto p2 = new Produto();
 
             Console.WriteLine();
