@@ -5,25 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
 
-namespace ConstrutorUm {
+namespace Construtor_This {
     class Produto {
         public string Nome;
         public double Preco;
         public int Quantidade;
 
-        public Produto(string nome, double preco, int quantidade) {
+        public Produto() {
+        }
+
+        public Produto(string nome, double preco): this() {
             Nome = nome;
             Preco = preco;
+        }
+
+        public Produto(string nome, double preco, int quantidade): this(nome, preco)  {
             Quantidade = quantidade;
         }
 
-        //public Produto(string nome, double preco) {
-        //    Nome = nome;
-        //    Preco = preco;
-        //}
 
-        public Produto() {
-        }
 
         public double ValorTotalEmEstoque() {
             return Preco * Quantidade;
